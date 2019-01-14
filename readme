@@ -1,0 +1,88 @@
+14th Jan 2019 - 10:00 PM
+
+Welcome to the crash course of Django,
+We are going to make a website each week ...excited???
+
+Each week will cover a topic below:
+
+1.) HTML
+2.) CSS
+3.) JS
+4.) Bootstrap
+5.) Models
+5.) Templates
+6.) Class Based Views
+
+Each website will be Django Based Obviously
+
+So making website each week will not only help you to remember the goddamn
+syntax and commands but also the above mentioned steps and would increase
+the speed
+
+
+NOTES -
+HTML -
+
+1.) When we install Django, it also installs a command line tool called
+    django-admin
+
+    Use this bro to create your projects
+
+    >> django-admin startproject static_world
+
+
+2.) Well now what?
+    I see a file called manage.py which looks kinda important
+
+    >> python manage.py runserver
+    Congrats!!!!!!!!!!!1 your website is up and running but wait...there's nothing in there
+    where is my "WEBAPP"?
+    have you created one?
+
+3.) Lets create an app
+
+    Well again, i see that one important file which can save us....manage.py...lets use it
+    To create a new app use
+    >> python manage.py startapp le_static_app
+
+    I see a new folder with my app name :D
+
+4.) Where are my htmls, css and statics ?
+
+    In order to include the HTML/Templates to your app
+    Follow the below steps:
+    1.) Create a folder called Templates
+    2.) create a folder with app name (le_static_app)
+    3.) create .html here (index.html)
+
+    # This will allow is to use 'le_static_app/index.html'.....cool (views.py)
+
+5.) Now how do i set it in the as my homepage??? aaggrrhhh
+
+    1.) well we have "views" for that... Views what???
+        Views is where all the request goes to...now you are requesting for a homepage right? (http://127.0.0.1:8000/)
+        so you can just add a method here and tell it what webpage to show...
+        check (views.py)
+
+    2.) Now suppose if there are many methods present in views.py so how will django decides which
+        one to pick, for that we use urls.py....we can use that to tell which , method to call
+
+        check le_static_app > urls.py
+
+    3.) So now the picture is clear...we get a url and we define which method to call
+        and now that method knows which html to call and also gives extra info (context)
+
+        Lets Runnn -> >> python manage.py runserver
+        What the exception???
+
+        Well its due to in order for django to know about a template 'le_static_app/index.html'
+        we must also add
+             INSTALLED_APPS = [
+            'le_static_app.apps.LeStaticAppConfig',
+
+        in settings.py
+
+
+  COOOOOOL
+
+  10:50 PM and we have a working static app :D

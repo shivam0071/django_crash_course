@@ -1,4 +1,5 @@
 14th Jan 2019 - 10:00 PM
+LINKS - https://docs.djangoproject.com/en/2.1/howto/
 
 Welcome to the crash course of Django,
 We are going to make a website each week ...excited???
@@ -72,6 +73,8 @@ HTML -
     3.) So now the picture is clear...we get a url and we define which method to call
         and now that method knows which html to call and also gives extra info (context)
 
+        and also for mapping different domain names/ paths
+
         Lets Runnn -> >> python manage.py runserver
         What the exception???
 
@@ -86,3 +89,31 @@ HTML -
   COOOOOOL
 
   10:50 PM and we have a working static app :D
+
+_________________________________________________________________________________________________________
+
+  Day 2
+  15th Jan 2019
+
+HTML :-
+Small Project :- We want a static page of "Google Homepage"
+JUMP TO FILE HTML_dumps.txt for html docs and info
+
+We are going to have Only Django Related info in this
+
+1.) Where do we keep our static files such as images, css and JS ??
+
+    i) create a folder as follows:
+        le_static_app > static > le_static_app > images.png
+
+2.) Using them in HTML/templates:
+
+    i)  load the static in your HTML as:
+        {% load static %}
+
+    ii) add this line   <img src="{% static "le_static_app/art.png" %}" alt="My image">
+
+3.) Add the views information and url path to repective files
+    http://127.0.0.1:8000/my-template
+
+JUMP
